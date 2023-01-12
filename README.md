@@ -1,9 +1,9 @@
 LogTrawly
 ===========
-Version: #VERSION#
-Date: #DATE#
+Version: 1.0
+Date: 2023-01-12
 
-LogTrawly is a cool web application.
+LogTrawly is a fast application to trawl through all your log-files on a specific server.
 
 It comes complete with a classic "configure - make - install" setup.
 
@@ -75,4 +75,4 @@ make dist
 
 Enjoy!
 
-Lukas Derendinger <lukas@>
+Lukas Derendinger <lukas.derendinger@bluewin.ch>
