@@ -1,7 +1,7 @@
 LogTrawly
 ===========
-Version: 1.0
-Date: 2023-01-12
+Version: #VERSION#
+Date: #DATE#
 
 LogTrawly is a fast application to trawl through all your log-files on a specific server.
 
