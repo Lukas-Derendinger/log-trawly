@@ -1,0 +1,169 @@
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:432
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:509
+msgid "Access Denied"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:92
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:205
+msgid "Add User"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:81
+msgid "All files"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:148
+msgid "All logs for this specific email"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:182
+#: lib/LogTrawly/GuiPlugin/MailFollow.pm:105
+msgid "Content"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:202
+msgid "Create Admin Account"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:452
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:526
+msgid "Data Decoding Problem %1"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:170
+#: lib/LogTrawly/GuiPlugin/MailFollow.pm:93
+msgid "Date & Time"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:130
+msgid "Delete User"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:133
+msgid "Do you really want to delete the selected user ?"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:105
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:110
+msgid "Edit User"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:144
+msgid "Email-follow"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:42
+msgid "Error"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/AbstractTable.pm:130
+msgid "Export %1"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:150
+msgid "Faild to remove user %1"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:60
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:94
+msgid "Family Name"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:53
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:85
+msgid "Given Name"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:128
+msgid "Information on the text-search functions"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:124
+msgid "Infos on text-search"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:96
+msgid "New User"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:44
+msgid "No user selected."
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:74
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:104
+msgid "Note"
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:176
+#: lib/LogTrawly/GuiPlugin/MailFollow.pm:99
+msgid "Origin"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:68
+msgid "Password"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:76
+msgid "Password Again"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:437
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:516
+msgid "Plugin Name missing"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:67
+msgid "Rights"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:204
+msgid "Save Changes"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:156
+msgid "The password instances did not match."
+msgstr ""
+
+#: lib/LogTrawly/GuiPlugin/Search.pm:106
+msgid "Trawl your log files"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/Controller/RpcService.pm:443
+msgid "Upload Missing"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:38
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:50
+msgid "UserId"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:46
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:59
+msgid "Username"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/Config.pm:491
+msgid "Wrong password!"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:141
+msgid "You can not delete the user you are logged in with"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/UserForm.pm:152
+msgid "You can only edit your own stuff unless you have admin permissions."
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:115
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/Users.pm:139
+msgid "You have to select a user first"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/AbstractCardlist.pm:82
+msgid "cardCfg must be defined in child plugin class"
+msgstr ""
+
+#: thirdparty/lib/perl5/CallBackery/GuiPlugin/AbstractForm.pm:91
+msgid "sorry, don't know the field you are talking about"
+msgstr ""

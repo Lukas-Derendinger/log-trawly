@@ -1,0 +1,36 @@
+{
+  "$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
+  "targets": [
+    {
+      "type": "source",
+      "outputPath": "compiled/source",
+      "bundle": {
+        "include": "qx.*"
+      },
+      "babelOptions": {
+        "targets": "Chrome >= 76, Firefox >= 68, edge >= 18"
+      }
+    },
+    {
+      "type": "build",
+      "outputPath": "compiled/build",
+      "babelOptions": {
+        "targets": "Chrome >= 76, Firefox >= 68, edge >= 18"
+      }
+    }
+  ],
+  "defaultTarget": "source",
+  "locales": ["en","de","fr","it"],
+  "environment": {
+      "qx.icontheme": "Tango"
+  },
+  "applications": [
+    {
+      "class": "log_trawly.Application",
+      "theme": "log_trawly.theme.Theme",
+      "title": "LogTrawly",
+      "name": "log_trawly",
+      "bootPath": "source/boot"
+    }
+  ]
+}

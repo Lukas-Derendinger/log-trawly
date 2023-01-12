@@ -1,0 +1,7 @@
+{
+  "makefile.extensionOutputFolder": "./.vscode",
+  "perlnavigator.includePaths": [
+
+  "$workspaceFolder/thirdparty/lib/perl5"
+  ]
+}

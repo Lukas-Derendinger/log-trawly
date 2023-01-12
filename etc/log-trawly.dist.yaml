@@ -1,0 +1,32 @@
+
+BACKEND:
+  cfg_db: /tmp/log-trawly.db
+  sesame_user: adfadsfasdf4ee3r
+# perl -MDigest::SHA -e 'print Digest::SHA::hmac_sha1_hex("access"),"\n"'
+  sesame_pass: 393afhkjhffjj
+  log_folder: /Users/Lukas/Privat/Programmieren/Callbackery/log-trawly/logs
+  cache_folder: cache
+
+FRONTEND:
+# logo = ../resource/log-trawly/logo.png
+# logo_small = ../resource/log-trawly/logo-small.png
+  title: Log-Trawly
+  initial_plugin: Search
+  company_name: OETIKER+PARTNER AG
+  company_url: http://www.oetiker.ch
+# max_width = 800
+
+PLUGIN:
+  - InitialUser:
+      module: UserForm
+      mode: init
+      type: add
+      tab-name: Create Initial User
+
+  - LogSearch:
+      module: Search
+      tab-name: Log search
+
+  - AdminUser:
+      module: Users
+      tab-name: Admin User Manager
