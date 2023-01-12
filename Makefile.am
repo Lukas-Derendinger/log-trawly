@@ -34,7 +34,7 @@ CALLBACKERY_PM := $(shell find thirdparty/lib/perl5/CallBackery -name "*.pm")
 share/messages.pot: $(PM) $(CALLBACKERY_PM)
 	mkdir -p share
 	$(XGETTEXT) -s --language=perl --package-name=$(PACKAGE) --package-version=$(VERSION) --from-code=UTF-8 --keyword=trm:1 --output=share/messages.pot $(PM) $(CALLBACKERY_PM)
-	sed -i 's/; charset=CHARSET/; charset=UTF-8/' share/messages.pot
+	$(PERL) -i -p -e 's/; charset=CHARSET/; charset=UTF-8/' share/messages.pot
 	for lang in $(LANGUAGES); do 		( test -f $$lang || cp share/messages.pot $$lang ); 		$(MSGMERGE) -s --force-po -U $$lang share/messages.pot; 	done
 
 test:
