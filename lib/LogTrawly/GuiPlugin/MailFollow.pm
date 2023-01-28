@@ -63,12 +63,14 @@ sub getCfg ($self) {
         opendir(my $fh, $subpath) || die "Can't opendir $subpath: $!";
         my @newlogfiles = grep { /^[^.]/ && -f "$subpath/$_" } readdir($fh);
         for my $file (@newlogfiles) {
-            $cfg->{$file} = {
-                file => "$subpath/$file",
-                rx => $serverRx,
-                fields => [qw(date origin content)],
-                title => trm($file),
-            };
+            if ($file =~ /.log$/ || $file =~ /.gz$/) {
+                $cfg->{$file} = {
+                    file => "$subpath/$file",
+                    rx => $serverRx,
+                    fields => [qw(date origin content)],
+                    title => trm($file),
+                }
+            }
         }
         closedir $fh;
     }
@@ -158,13 +160,17 @@ sub getTableRowCount {
             my $fileName = $cfg->{$thisKey}{file};
 
             my $fh;
+            filehandleloop:
             for ($cfg->{$thisKey}{file}) {
                 /.log$/ && do {
                     open($fh, "<", $fileName);
+                    last filehandleloop;
                 };
                 /.gz$/ && do {
                     open($fh, "gunzip -c $_ |") || die "can't open pipe to $_";
+                    last filehandleloop;
                 };
+                last fileloop1;
             }
             while (<$fh>){
                 next if defined $baseKey and index($_, $baseKey) == -1;
@@ -184,13 +190,17 @@ sub getTableRowCount {
             my $fileName = $cfg->{$thisKey}{file};
 
             my $fh;
+            filehandleloop:
             for ($cfg->{$thisKey}{file}) {
                 /.log$/ && do {
                     open($fh, "<", $fileName);
+                    last filehandleloop;
                 };
                 /.gz$/ && do {
                     open($fh, "gunzip -c $_ |") || die "can't open pipe to $_";
+                    last filehandleloop;
                 };
+                last fileloop2;
             }
             while (<$fh>){
                 next if defined $messageID and index($_, $messageID) == -1;
@@ -214,13 +224,17 @@ sub getTableRowCount {
             my $fileName = $cfg->{$thisKey}{file};
 
             my $fh;
+            filehandleloop:
             for ($cfg->{$thisKey}{file}) {
                 /.log$/ && do {
                     open($fh, "<", $fileName);
+                    last filehandleloop;
                 };
                 /.gz$/ && do {
                     open($fh, "gunzip -c $_ |") || die "can't open pipe to $_";
+                    last filehandleloop;
                 };
+                last fileloop3;
             }
             lineloop:
             while (<$fh>){

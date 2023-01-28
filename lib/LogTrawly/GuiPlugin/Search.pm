@@ -62,11 +62,13 @@ sub getCfg ($self) {
         opendir(my $fh, $subpath) || die "Can't opendir $subpath: $!";
         my @newlogfiles = grep { /^[^.]/ && -f "$subpath/$_" } readdir($fh);
         for my $file (@newlogfiles) {
-            $cfg->{$file} = {
-                file => "$subpath/$file",
-                rx => $serverRx,
-                fields => [qw(date origin content)],
-                title => trm($file),
+            if ($file =~ /.log$/ || $file =~ /.gz$/) {
+                $cfg->{$file} = {
+                    file => "$subpath/$file",
+                    rx => $serverRx,
+                    fields => [qw(date origin content)],
+                    title => trm($file),
+                }
             }
         }
         closedir $fh;
@@ -233,6 +235,7 @@ sub getTableRowCount {
         @cfgKeys = sort keys %$cfg;
     }
 
+    fileloop:
     for my $thisKey(@cfgKeys) {
         my @args;
         if (my $name = $cfg->{$thisKey}{file}) {
@@ -240,13 +243,17 @@ sub getTableRowCount {
         }
 
         my $fh;
+        filehandleloop:
         for ($cfg->{$thisKey}{file}) {
             /.log$/ && do {
                 open($fh, $mode, @args);
+                last filehandleloop;
             };
             /.gz$/ && do {
                 open($fh, "gunzip -c $_ |") || die "can't open pipe to $_";
+                last filehandleloop;
             };
+            next fileloop;
         }
 
         if ($useGrep) {
@@ -316,13 +323,17 @@ sub getTableData {
 
         my $fh;
         # Perl's switch case construct
+        filehandleloop:
         for ($cfg->{$thisKey}{file}) {
             /.log$/ && do {
                 open($fh, $mode, @args);
+                last filehandleloop;
             };
             /.gz$/ && do {
                 open($fh, "gunzip -c $_ |") || die "can't open pipe to $_";
+                last filehandleloop;
             };
+            last fileloop;
         }
         lineLoop3:
         while (<$fh>){
