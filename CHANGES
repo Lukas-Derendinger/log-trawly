@@ -5,3 +5,7 @@
 0.0.1 2023-01-12  Lukas Derendinger <lukas.derendinger@bluewin.ch>
 
 - First Commit on GitHub
+
+0.0.2 2023-01-28  Lukas Derendinger <lukas.derendinger@bluewin.ch>
+
+- Problem with filehandling of various file types solved. Currently only .log and .gz files are processed.
